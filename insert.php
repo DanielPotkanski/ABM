@@ -1,7 +1,7 @@
 <?php  
  $connect = mysqli_connect("127.0.0.1", "ignacybrawura", "12345678De", "ignacybrawura"); 
  $output = '';
- $test = "SELECT * FROM Rezerwacja WHERE ID_MiejscePracy = '".$_POST["ID_MiejscePracy"]."' AND ((StartRezerwacjiH > '".$_POST["StartRezerwacjiH"]."' AND KoniecRezerwacjiH < '".$_POST["KoniecRezerwacjiH"]."') OR (StartRezerwacjiH > '".$_POST["StartRezerwacjiH"]."' AND StartRezerwacjiH < '".$_POST["KoniecRezerwacjiH"]."') OR (StartRezerwacjiH < '".$_POST["StartRezerwacjiH"]."' AND KoniecRezerwacjiH > '".$_POST["KoniecRezerwacjiH"]."') OR (KoniecRezerwacjiH > '".$_POST["StartRezerwacjiH"]."' AND KoniecRezerwacjiH < '".$_POST["KoniecRezerwacjiH"]."'))";
+ $test = "SELECT * FROM Rezerwacja WHERE ID_MiejscePracy = '".$_POST["ID_MiejscePracy"]."' AND ((StartRezerwacjiH >= '".$_POST["StartRezerwacjiH"]."' AND KoniecRezerwacjiH < '".$_POST["KoniecRezerwacjiH"]."') OR (StartRezerwacjiH > '".$_POST["StartRezerwacjiH"]."' AND StartRezerwacjiH < '".$_POST["KoniecRezerwacjiH"]."') OR (StartRezerwacjiH <= '".$_POST["StartRezerwacjiH"]."' AND KoniecRezerwacjiH >= '".$_POST["KoniecRezerwacjiH"]."') OR (KoniecRezerwacjiH > '".$_POST["StartRezerwacjiH"]."' AND KoniecRezerwacjiH < '".$_POST["KoniecRezerwacjiH"]."'))";
  $result = mysqli_query($connect, $test);
  
  if (mysqli_num_rows($result) > 0){

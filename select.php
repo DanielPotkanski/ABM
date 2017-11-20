@@ -8,7 +8,7 @@
            <table class="table table-bordered">  
                 <tr>  
                      
-                     <th width="10%">ID Miejsca Pracy </th>  
+                     <th width="10%">Stanowisko Pracy </th>  
                      <th width="15%">Start Rezerwacji </th> 
 					 <th width="15%">Koniec Rezerwacji </th>
 					 <th width="10%">Imie </th>

@@ -23,20 +23,18 @@
  </html>  
  <script> 
     	       
-        function validString(input){
-            return !(/[\\/&;]/.test(input));
-        }
+function validString(input){
+	return !(/[\\/&;]/.test(input));
+}
         
-		function isNumber(n){
-            return !isNaN(parseFloat(n)) && isFinite(n);
-        }
+function isNumber(n){
+       return !isNaN(parseFloat(n)) && isFinite(n);
+}
         
-		function validateEmail(email) 
-		{
-			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-			return re.test(email);
-		}
-        
+function validateEmail(email){
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+}
     
  $(document).ready(function(){  
  
@@ -45,8 +43,7 @@
            $.ajax({  
                 url:"select.php",  
                 method:"POST", 
-				success:function(data)
-                {  
+		success:function(data){  
                      $('#live_data').html(data);  
                 }  
            });  
@@ -59,7 +56,7 @@
            $.ajax({  
                 url:"select2.php",  
                 method:"POST", 
-				success:function(data){  
+		success:function(data){  
                      $('#live_data2').html(data);  
                 }  
            });  
@@ -153,16 +150,15 @@
 	  
 	  
 	  // INSERT TAB 2
-	  
-	  
-		$(document).on('click', '#btn_add2', function(){  
-           var rodzaj = $('#rodzaj').text();  
-           var model = $('#model').text();
-		   var oznaczenie = $('#oznaczenie').text(); 
-		   var rokzakupu = $('#rokzakupu').text();
-		   var wartosc = $('#wartosc').text();
-		   var opisb = $('#opisb').text();
-		   var stanowiskopracy = $('#stanowiskopracy').text();
+
+	$(document).on('click', '#btn_add2', function(){  
+        var rodzaj = $('#rodzaj').text();  
+        var model = $('#model').text();
+	var oznaczenie = $('#oznaczenie').text(); 
+	var rokzakupu = $('#rokzakupu').text();
+	var wartosc = $('#wartosc').text();
+	var opisb = $('#opisb').text();
+	var stanowiskopracy = $('#stanowiskopracy').text();
 		   
 		 
            if(!(validString(rodzaj)) || rodzaj == '') 
@@ -213,9 +209,7 @@
                 }  
            })  
       });	
-
-
-	  
+  
 	  // EDIT TABLE 2
 	  
       function edit_data2(id, text, column_name)  
@@ -324,11 +318,8 @@
                 });  
            }  
       }); 
-
-	  
 		// DELETE TAB 2
-		
-		
+
 		$(document).on('click', '.btn_delete2', function(){  
            var id=$(this).data("id8b");  
            if(confirm("Czy napewno chcesz usunac ten rekord?"))  
@@ -346,6 +337,5 @@
       
 	  }); 
 
-	  
  });  
  </script>

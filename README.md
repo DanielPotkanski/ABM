@@ -9,4 +9,4 @@ UWAGI TECHNICZNE:
 - Dla wygody użytkowania sugerowane jest użycie AdBlocka, z uwagi na reklamę generowaną automatycznie na stronie przez darmowy hosting.
 
 ZAŁOŻENIA:
-- Liczba Miejsc Pracy jest ograniczona do zakresu (1,100)
+- Liczba Stanowisk Pracy jest ograniczona do zakresu (1,100)

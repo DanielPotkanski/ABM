@@ -7,7 +7,6 @@
       <div class="table-responsive">  
            <table class="table table-bordered">  
                 <tr>  
-                     
                      <th width="10%">Stanowisko Pracy </th>  
                      <th width="15%">Start Rezerwacji </th> 
 					 <th width="15%">Koniec Rezerwacji </th>
